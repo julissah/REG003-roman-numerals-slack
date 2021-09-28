@@ -1,0 +1,29 @@
+{
+  "name": "reg003-roman-numerals-slack",
+  "version": "1.0.0",
+  "description": "Slash command slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julissah/REG003-roman-numerals-slack.git"
+  },
+  "keywords": [
+    "slack",
+    "express"
+  ],
+  "author": "Julissa Huaman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julissah/REG003-roman-numerals-slack/issues"
+  },
+  "homepage": "https://github.com/julissah/REG003-roman-numerals-slack#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "dependencies": {
+    "roman-numerals-convert": "^1.0.3"
+  }
+}
