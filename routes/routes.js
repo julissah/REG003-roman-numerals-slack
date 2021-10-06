@@ -2,7 +2,7 @@ const { Router } = require('express');
 
 const router = Router();
 
-const { parse, stringify } = require('roman-numerals-api');
+const { parse, stringify } = require('roman-numerals-api/src/api');
 const pkg = require('../package.json');
 router.get('/', (req, res) => {
     res.json({
