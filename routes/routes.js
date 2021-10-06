@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 // POST
 router.post('/', (req, res) => {
     const { text } = req.body;
-    
+    console.log(text);
     const [name, param] = text.split(' ');
     const resultArabigo = (value) => {
       try {
