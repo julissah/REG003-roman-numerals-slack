@@ -14,9 +14,8 @@ router.get('/', (req, res) => {
 // POST
 router.post('/', (req, res) => {
     const { text } = req.body;
-    console.log(text)
+    
     const [name, param] = text.split(' ');
-  
     const resultArabigo = (value) => {
       try {
         return parse(value);
@@ -34,33 +33,33 @@ router.post('/', (req, res) => {
     };
   
     if (name === 'parse') {
-      res.json({
+      return res.json({
         response_type: 'in channel',
         text: resultArabigo(param),
       });
     }
     if (name === 'stringify') {
-      res.json({
+      return res.json({
         response_type: 'in channel',
         text: resultRoman(+param),
       });
     }
   
     if (name === 'help') {
-      res.json({
+      return res.json({
         response_type: 'in channel',
         text: 'Convertir de ROMAN-ARA [ ejemplo: /parse 10 ], de ARA-ROMAN: [ ejemplo: /stringify VII ]',
       });
     }
   
     if (name === 'version') {
-      res.json({
+      return res.json({
         response_type: 'in channel',
         text: pkg.version,
       });
     }
   
-    res.status(400).json({
+    return res.status(400).json({
       response_type: 'ephemeral',
       text: "Sorry, slash commando, that didn't work. Please try again.",
     });
