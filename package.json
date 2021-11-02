@@ -28,6 +28,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "jest": "^27.2.4",
-    "roman-numerals-api": "^1.0.6"
+    "roman-numerals-convert": "^1.0.4"
   }
 }
