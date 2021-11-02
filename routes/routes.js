@@ -30,32 +30,49 @@ router.post('/', (req, res) => {
         return error.message;
       }
     };
-  
-    if (name === 'parse') {
-      return res.json({
-        response_type: 'in channel',
-        text: resultArabigo(param),
-      });
-    }
-    if (name === 'stringify') {
-      return res.json({
-        response_type: 'in channel',
-        text: resultRoman(+param),
-      });
-    }
-  
-    if (name === 'help') {
-      return res.json({
-        response_type: 'in channel',
-        text: 'Convertir de ROMAN-ARA [ ejemplo: /parse 10 ], de ARA-ROMAN: [ ejemplo: /stringify VII ]',
-      });
-    }
-  
-    if (name === 'version') {
-      return res.json({
-        response_type: 'in channel',
-        text: pkg.version,
-      });
+
+    if (/\s/.test(text)) {
+
+      if (name === 'parse') {
+        return res.json({
+          response_type: 'in channel',
+          text: resultArabigo(param),
+        });
+      }
+
+      if (name === 'stringify') {
+        return res.json({
+          response_type: 'in channel',
+          text: resultRoman(+param),
+        });
+      }    
+      
+    } else {
+
+      switch (text) {
+        case 'version':
+          return res.json({
+            response_type: 'in channel',
+            text: pkg.version,
+          });
+        case 'help':
+          return res.json({
+            response_type: 'in channel',
+            text: 'Convert: Romano-Arábigo [ Example: /parse V ] Result: 5, Arábigo-Romano: [ Example: /stringify 5 ] Result: V /n',
+          });
+        default:
+          if ( isNaN(text) === false ) {
+            return res.json({
+              response_type: 'in channel',
+              text: resultRoman(+text),
+            });
+          } else {
+            return res.json({
+              response_type: 'in channel',
+              text: resultArabigo(text),
+            });
+          }
+      }
     }
   
     return res.status(400).json({
