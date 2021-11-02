@@ -58,7 +58,7 @@ router.post('/', (req, res) => {
         case 'help':
           return res.json({
             response_type: 'in channel',
-            text: 'Convert: Romano-Arábigo [ Example: /parse V ] Result: 5, Arábigo-Romano: [ Example: /stringify 5 ] Result: V /n',
+            text: 'Convert:  Romano-Arábigo [ Example: /roman-numerals parse v ] Result: 5,  Arábigo-Romano: [ Example: /roman-numerals stringify 5] Result: V',
           });
         default:
           if ( isNaN(text) === false ) {
