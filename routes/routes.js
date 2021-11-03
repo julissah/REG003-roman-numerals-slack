@@ -15,7 +15,6 @@ router.get('/romans', async (req, res) => {
     try {
       const arrayRomansDB = await Romans.find()
       console.log(arrayRomansDB)
-      // res.render('romans', {arrayRomans})
       res.json( arrayRomansDB );
       // res.render('romans', {
       //   arrayRoman: arrayRomansDB,
