@@ -1,14 +1,29 @@
 const { Router } = require('express');
-
+const Romans = require('../schemas/romans.schema')
 const router = Router();
 
 const { parse, stringify } = require('roman-numerals-convert');
 const pkg = require('../package.json');
 router.get('/', (req, res) => {
-    res.json({
-        name: pkg.name,
-        version: pkg.version,
-    });
+  res.json({
+      name: pkg.name,
+      version: pkg.version,
+  });
+});
+router.get('/romans', async (req, res) => {
+  
+    try {
+      const arrayRomansDB = await Romans.find()
+      console.log(arrayRomansDB)
+      // res.render('romans', {arrayRomans})
+      res.json( arrayRomansDB );
+      // res.render('romans', {
+      //   arrayRoman: arrayRomansDB,
+      // })
+    } catch (error) {
+      console.log(error);
+    }
+
 });
 
 // POST
