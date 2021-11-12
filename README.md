@@ -5,7 +5,7 @@
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Arquitectura](#3-arquitectura)
-* [4. Objetivos de aprendizaje](#4-objetivos-de-aprendizaje)
+* [4. Demo](#4-demo)
 * [5. Consideraciones generales](#5-consideraciones-generales)
 * [6. Criterios de aceptación mínimos del proyecto](#6-criterios-de-aceptación-mínimos-del-proyecto)
 * [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)
@@ -34,92 +34,10 @@ las consultas enviadas desde Slack.
 ## 3. Arquitectura
 ![](/img/arquitectura.svg)
 
-## 4. Objetivos de aprendizaje
+## 4. App
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
-
-### Node.js
-
-- [ ] **Instalar y usar módulos con npm**
-
-- [ ] **Configuración de package.json**
-
-- [ ] **Configuración de npm-scripts**
-
-### JavaScript
-
-- [ ] **Pruebas unitarias (unit tests)**
-
-
-- [ ] **Pruebas asíncronas**
-
-
-
-- [ ] **Uso de mocks y espías**
-
-
-
-- [ ] **Módulos de CommonJS**
-
-
-- [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
-
-### Control de Versiones (Git y GitHub)
-
-- [ ] **Git: Instalación y configuración**
-
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
-
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
-
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
-
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
-
-- [ ] **GitHub: Organización en Github (projects | issues | labels | milestones | releases)**
-
-### Express.js
-
-- [ ] **Manejo de rutas**
-
-- [ ] **Uso y creación de middleware**
-
-### HTTP
-
-- [ ] **Consulta o petición (request) y respuesta (response).**
-
-  <details><summary>Links</summary><p>
-
-  * [Generalidades del protocolo HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Overview)
-  * [Mensajes HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Messages)
-</p></details>
-
-- [ ] **Cuerpo (body)**
-
-
-
-- [ ] **Verbos HTTP**
-
-
-- [ ] **Codigos de status de HTTP**
-
-
-
-- [ ] **Encodings y JSON**
-
-
-
-### WebOps
-
-- [ ] **cloud-functions**
-
-### slack
-
-- [ ] **Slash commands de Slack**
-
-
+![](/img/app.PNG)
+### [roman-numerals](https://www.loom.com/share/988fb4d915ba4bedafae5d3297fab416)
 
 ## 5. Consideraciones generales
 
