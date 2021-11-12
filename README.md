@@ -4,10 +4,12 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)
+* [3. Arquitectura](#3-arquitectura)
+* [4. Objetivos de aprendizaje](#4-objetivos-de-aprendizaje)
+* [5. Consideraciones generales](#5-consideraciones-generales)
+* [6. Criterios de aceptación mínimos del proyecto](#6-criterios-de-aceptación-mínimos-del-proyecto)
+* [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)
+* [8. Despliegue](#8-despliegue)
 
 ***
 
@@ -29,7 +31,10 @@ números enteros en números romanos y viceversa. Para ofrecer esta funcionalida
 tendrás que implementar y desplegar un servidor HTTP que se encargue de responder
 las consultas enviadas desde Slack.
 
-## 3. Objetivos de aprendizaje
+## 3. Arquitectura
+![](/img/arquitectura.svg)
+
+## 4. Objetivos de aprendizaje
 
 Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
 
@@ -37,54 +42,25 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **Instalar y usar módulos con npm**
 
-  <details><summary>Links</summary><p>
-
-  * [Sitio oficial de npm (en inglés)](https://www.npmjs.com/)
-</p></details>
-
 - [ ] **Configuración de package.json**
 
-  <details><summary>Links</summary><p>
-
-  * [package.json - Documentación oficial (en inglés)](https://docs.npmjs.com/files/package.json)
-</p></details>
-
 - [ ] **Configuración de npm-scripts**
-
-  <details><summary>Links</summary><p>
-
-  * [scripts - Documentación oficial (en inglés)](https://docs.npmjs.com/misc/scripts)
-</p></details>
 
 ### JavaScript
 
 - [ ] **Pruebas unitarias (unit tests)**
 
-  <details><summary>Links</summary><p>
-
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
 
 - [ ] **Pruebas asíncronas**
 
-  <details><summary>Links</summary><p>
 
-  * [Tests de código asincrónico con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/asynchronous)
-</p></details>
 
 - [ ] **Uso de mocks y espías**
 
-  <details><summary>Links</summary><p>
 
-  * [Manual Mocks con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/manual-mocks)
-</p></details>
 
 - [ ] **Módulos de CommonJS**
 
-  <details><summary>Links</summary><p>
-
-  * [Modules: CommonJS modules - Node.js Docs](https://nodejs.org/docs/latest/api/modules.html)
-</p></details>
 
 - [ ] **Uso de linter (ESLINT)**
 
@@ -122,32 +98,18 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **Cuerpo (body)**
 
-  <details><summary>Links</summary><p>
 
-  * [Cuerpo de Mensajes HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Messages#cuerpo)
-</p></details>
 
 - [ ] **Verbos HTTP**
 
-  <details><summary>Links</summary><p>
-
-  * [Métodos de petición HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Methods)
-</p></details>
 
 - [ ] **Codigos de status de HTTP**
 
-  <details><summary>Links</summary><p>
 
-  * [Códigos de estado de respuesta HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Status)
-  * [The Complete Guide to Status Codes for Meaningful ReST APIs - dev.to](https://dev.to/khaosdoctor/the-complete-guide-to-status-codes-for-meaningful-rest-apis-1-5c5)
-</p></details>
 
 - [ ] **Encodings y JSON**
 
-  <details><summary>Links</summary><p>
 
-  * [Introducción a JSON - Documentación oficial](https://www.json.org/json-es.html)
-</p></details>
 
 ### WebOps
 
@@ -157,12 +119,9 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **Slash commands de Slack**
 
-  <details><summary>Links</summary><p>
 
-  * [Enabling interactivity with Slash Commands - Slack Docs](https://api.slack.com/interactivity/slash-commands)
-</p></details>
 
-## 4. Consideraciones generales
+## 5. Consideraciones generales
 
 * El equipo de coaches te dará un tiempo sugerido e indicaciones sobre si
   trabajar sola o en equipo. Recuerda que cada una aprende a diferente ritmo.
@@ -170,7 +129,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   interfaz será desplegada usando GitHub pages. Si no sabes lo que es GitHub, no
   te preocupes, lo aprenderás durante este proyecto.
 
-## 5. Criterios de aceptación mínimos del proyecto
+## 6. Criterios de aceptación mínimos del proyecto
 
 ### [Slash Commands](https://api.slack.com/interactivity/slash-commands)
 
@@ -219,7 +178,7 @@ Dos endpoints:
 
   Puedes encontrar más detalles en la [documentación oficial de Slack](https://api.slack.com/interactivity/slash-commands).
 
-## 6. Pistas, tips y lecturas complementarias
+## 7. Pistas, tips y lecturas complementarias
 
 ### Servidor HTTP
 
@@ -250,14 +209,11 @@ Para poder trabajar en este proyecto necesitas seguir estos pasos:
 4. Instala la App en tu workspace.
 5. Una vez instalada la app en tu workspace podrás invocar el _slash command_
    desde el chat de Slack.
+## 8. Despliegue
 
-### Otros recursos y lecturas complementarias
+El despliegue se realizó con Heroku visible en el siguiente enlace: https://roman-numerals-api.herokuapp.com/
 
-* [Slack API](https://api.slack.com/)
-* [Slack API - Slash Commands](https://api.slack.com/interactivity/slash-commands)
-* [Acerca de Node.js - Documentación oficial](https://nodejs.org/es/about/)
-* [learnyounode](https://github.com/workshopper/learnyounode)
-* [¿Qué es Node.js y para qué sirve? - drauta.com](https://www.drauta.com/que-es-nodejs-y-para-que-sirve)
-* [¿Qué es Nodejs? Javascript en el Servidor - Fazt en YouTube](https://www.youtube.com/watch?v=WgSc1nv_4Gw)
-* [¿Simplemente qué es Node.js? - IBM Developer Works, 2011](https://www.ibm.com/developerworks/ssa/opensource/library/os-nodejs/index.html)
-* [Node.js y npm](https://roman-numerals-api.herokuapp.com/)
+Base de datos utilizada, `MongoDB`.
+
+
+
